@@ -3,8 +3,6 @@ type MirrorTextProps = {
     mirror: string
 }
   
-
-  
   export const MirrorText = ({ main, mirror }: MirrorTextProps) => {
     return (
       <div className="relative w-fit mx-auto my-20">

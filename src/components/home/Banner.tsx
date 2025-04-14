@@ -1,7 +1,5 @@
 import { JobWritter } from "./JobWritter"
 
-import { motion } from 'framer-motion'
-
 export const Banner = () => {
     return(
         <div className="relative">

@@ -1,5 +1,9 @@
 import { JobWritter } from "./JobWritter"
 
+import { IoLogoInstagram } from "react-icons/io";
+import { FaYoutube } from "react-icons/fa";
+import Link from "next/link";
+
 export const Banner = () => {
     return(
         <div className="relative">
@@ -8,6 +12,14 @@ export const Banner = () => {
                     <h1 className="text-4xl font-bold">Hi, my name is Filipe Carvalho</h1>
                     <JobWritter />
                     <p className="text-xl text-gray-700">professor de inglês e programação/tradutor/legendador <br /> amante de tecnologia/entusiasta de fones de ouvido louco por café e jogos</p>
+                    <div className="flex items-center gap-5">
+                        <Link href={"https://www.instagram.com/flpc.english/"} target="_blank">
+                            <IoLogoInstagram className="text-primary text-3xl cursor-pointer"/>
+                        </Link>
+                        <Link href={"https://www.youtube.com/@filipecarvalhotutoriais"} target="_blank">
+                            <FaYoutube className="text-primary text-3xl cursor-pointer"/>
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="flex justify-center">

@@ -1,4 +1,5 @@
 import { AboutMe } from "@/components/aboutme/AboutMe"
+import { Experience } from "@/components/experiences/Experience"
 import { Banner } from "@/components/home/Banner"
 
 const home = () => {
@@ -6,6 +7,7 @@ const home = () => {
         <main>
             <Banner />
             <AboutMe />
+            <Experience />
         </main>
     )
 }

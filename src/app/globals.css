@@ -136,3 +136,17 @@
 .animate-slide-down {
   animation: slideDown 1.2s ease-out forwards;
 }
+
+.flip-wrapper {
+  perspective: 1000px; /* dá profundidade pro efeito 3D */
+}
+
+.flip-text {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  display: inline-block;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}

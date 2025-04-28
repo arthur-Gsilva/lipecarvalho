@@ -8,7 +8,7 @@ export const JobWritter = () => {
       I'm{' '}
       <span className="text-primary">
         <Typewriter
-          words={['English Professor', 'Legender', 'Translater']}
+          words={['English Professor', 'Subtitler', 'Translater']}
           loop={true}
           cursor
           cursorStyle="|"

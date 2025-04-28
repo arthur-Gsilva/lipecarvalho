@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Banner = () => {
     return(
         <div className="relative">
-            <div className="container px-6 md:px-0 mt-8 flex flex-col-reverse md:flex-row mx-auto justify-between items-center">
+            <div className="container px-6 md:px-0 mt-8 flex flex-col-reverse md:flex-row mx-auto justify-between items-center gap-4">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-4xl font-bold">Hi, my name is Filipe Carvalho</h1>
                     <JobWritter />
@@ -23,7 +23,7 @@ export const Banner = () => {
                 </div>
 
                 <div className="flex justify-center">
-                    <img src="./me.png" alt="foto minha" className="h-auto w-4/5 rounded-full border-4 border-primary" />
+                    <img src="./me.png" alt="foto minha" className="h-auto w-4/5 rounded-full border-5 border-primary" />
                 </div>
             </div>
 

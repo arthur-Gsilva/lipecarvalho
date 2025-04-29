@@ -1,15 +1,17 @@
 'use client'
 
 import { Certificado } from "@/data/certificates"
+import { Material } from "@/data/materials"
 import Link from "next/link"
 import { useState } from "react"
 import ReactCardFlip from "react-card-flip"
 
 type Props = {
-    data: Certificado
+    data: Certificado | Material,
+    certificate: boolean
 }
 
-export const CertificateCard = ({ data }: Props) => {
+export const CertificateCard = ({ data, certificate }: Props) => {
 
     const [hovering, setHovering] = useState(false)
 
@@ -35,7 +37,15 @@ export const CertificateCard = ({ data }: Props) => {
                     {hovering ? 'Translate' : 'Traduzir'}
                 </div>
 
-                <Link href={data.link} target="_blank" className="underline text-center text-sm sm:text-md">Clique aqui para acessar o certificado</Link>
+                <Link href={data.link} target="_blank" className="underline text-center text-sm sm:text-md">
+                    {certificate &&
+                        <>Clique aqui para acessar o certificado</>
+                    }
+                    {!certificate &&
+                        <>Clique aqui para jogar</>
+                    }
+                    
+                </Link>
             </div>
         </div>
     )

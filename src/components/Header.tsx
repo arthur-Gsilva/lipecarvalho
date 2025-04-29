@@ -6,12 +6,23 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import Link from "next/link";
+import { usePathname } from "next/navigation"
 import { useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
 export const Header = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
+
+    const pathname = usePathname()
+
+    const links = [
+        { href: '/', label: 'Home', tooltip: 'Início' },
+        { href: '/certificados', label: 'Certificates', tooltip: 'Certificados' },
+        { href: '/insignias', label: 'Badges', tooltip: 'Insígnias' },
+        { href: '/materiais', label: 'Materials', tooltip: 'Materiais' },
+    ]
 
     return(
         <header>
@@ -29,52 +40,31 @@ export const Header = () => {
                 }
 
                 
-                <nav className={` ${openMenu ? "block" : "hidden md:block"} `}>
+                <nav className={`${openMenu ? "block" : "hidden md:block"}`}>
                     <ul className="flex gap-10 font-bold">
-                        <li className="cursor-pointer transition hover:text-primary">
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger className="cursor-pointer">Home</TooltipTrigger>
-                                <TooltipContent>
-                                <p>Início</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-                        </li>
-                        <li className="cursor-pointer transition hover:text-primary">
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger className="cursor-pointer">Certificates</TooltipTrigger>
-                                <TooltipContent>
-                                <p>Certificados</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-                        </li>
-                        <li className="cursor-pointer transition hover:text-primary">
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger className="cursor-pointer">Badges</TooltipTrigger>
-                                <TooltipContent>
-                                <p>Insígnias</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-                        </li>
-                        <li className="cursor-pointer transition hover:text-primary">
-                        <TooltipProvider>
-                            <Tooltip>
-                                <TooltipTrigger className="cursor-pointer">Materials</TooltipTrigger>
-                                <TooltipContent>
-                                <p>Materiais</p>
-                                </TooltipContent>
-                            </Tooltip>
-                        </TooltipProvider>
-                        </li>
+                        {links.map(({ href, label, tooltip }) => {
+                            const isActive = pathname === href
+
+                            return (
+                                <li 
+                                    key={href} 
+                                    className={`cursor-pointer transition hover:text-primary ${isActive ? 'text-primary' : ''}`}
+                                >
+                                    <TooltipProvider>
+                                        <Tooltip>
+                                            <TooltipTrigger asChild>
+                                                <Link href={href}>{label}</Link>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>{tooltip}</p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </li>
+                            )
+                        })}
                     </ul>
                 </nav>
-                
-                
             </div>
         </header>
     )

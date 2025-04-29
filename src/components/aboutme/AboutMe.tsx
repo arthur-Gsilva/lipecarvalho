@@ -1,20 +1,55 @@
 'use client'
 
-import { Section } from "../Section"
+import ReactCardFlip from "react-card-flip"
+import { MirrorText } from "../MirrorText"
+import { useState } from "react"
 
 export const AboutMe = () => {
 
+    const [hovering, setHovering] = useState(false)
 
-    const englishText = "English teacher and professional translator since 2015. I have experience in teaching English as a foreign language in renowned language schools and professional courses using book collections such as Interchange (Cambridge Press), evolve (Cambridge Press), ventures (Cambridge Press), world class (Cengage), and World English (Cengage). my experiences with translation involve services for international companies, focused on content production, proofreading, localization, and creative campaigns development in platforms such as Taboola, Baidu, outbrain, and Zemanta."
+    const englishText = "English teacher and translator since 2015, with experience in teaching English as a foreign language using Cambridge and Cengage materials. I’ve also worked with international companies on translation, localization, editing, and creative campaigns for platforms like Taboola, Baidu, Outbrain, and Zemanta."
 
-    const portugueseText = "Professor de língua inglesa e tradutor profissional desde 2015. possuo experiência com o ensino de inglês como língua estrangeira em respeitadas escolas de idiomas e cursos profissionalizantes usando coleções de livros como Interchange (Cambridge press), evolve (Cambridge Press), ventures (Cambridge press), world class (Cengage) e world English (Cengage). minhas experiências com tradução envolvem serviços para empresas internacionais, com foco em produção de conteúdo, correção de tradução, localização e desenvolvimento de campanhas criativas em plataformas como taboola, baidu, outbrain e zemanta."
+    const portugueseText = "Professor de inglês e tradutor desde 2015, com experiência no ensino de inglês como língua estrangeira em escolas renomadas, utilizando materiais da Cambridge e Cengage. Atuei também com tradução e localização para empresas internacionais, incluindo revisão, adaptação criativa e campanhas em plataformas como Taboola, Baidu, Outbrain e Zemanta."
 
     return(
-        <Section 
-            main="About Me"
-            mirror="Sobre Mim"
-            english={englishText}
-            portuguese={portugueseText}
-        />
+        <div className="container px-6 md:px-0 mx-auto mt-10 pb-10">
+            <MirrorText 
+                main="About Me"
+                mirror="Sobre Mim"
+                bgwhite
+            />
+
+            <div className="flex flex-col md:flex-row gap-6 items-center">
+                <img 
+                    src="./about.jpg" 
+                    alt="Foto minha working" 
+                    className="flex-1 w-44 rounded-md"
+                />
+
+                <div className="flex-1">
+                    <div className="text-center mb-6">
+                        <ReactCardFlip isFlipped={hovering} flipDirection="horizontal">
+                            <p key="front" className="text-md md:text-xl">
+                                {englishText}
+                            </p>
+                            <p key="back" className="text-md md:text-xl">
+                                {portugueseText}
+                            </p>
+                        </ReactCardFlip>
+                    </div>
+
+                    <div className="flex items-center justify-center mt-4">
+                        <div
+                            className="bg-primary text-white p-5 rounded-sm cursor-pointer transition duration-400 hover:rotate-y-[30deg] shadow-lg"
+                            onMouseEnter={() => setHovering(true)}
+                            onMouseLeave={() => setHovering(false)}
+                        >
+                            {hovering ? 'Translate' : 'Traduzir'}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }

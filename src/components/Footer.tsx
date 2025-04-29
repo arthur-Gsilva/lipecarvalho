@@ -3,6 +3,7 @@ import { MirrorText } from "./MirrorText"
 import { IoLogoInstagram } from "react-icons/io"
 import { FaYoutube, FaLinkedin } from "react-icons/fa6"
 import { FaGithub } from "react-icons/fa";
+import { SiGmail } from 'react-icons/si'
 
 export const Footer = () => {
     return(
@@ -35,10 +36,9 @@ export const Footer = () => {
                                     <FaLinkedin className="text-white text-3xl cursor-pointer"/>
                                     <p className="text-xl">Linkedin</p>
                                 </Link>
-                                <Link href={"https://www.youtube.com/@filipecarvalhotutoriais"} target="_blank"
-                                className="flex items-center gap-3">
-                                    <FaGithub className="text-white text-3xl cursor-pointer"/>
-                                    <p className="text-xl">Github</p>
+                                <Link href={"mailto:filipescmelo@gmail.com"} className="flex items-center gap-3">
+                                    <SiGmail className="text-white text-3xl cursor-pointer" />
+                                    <p className="text-xl">Gmail</p>
                                 </Link>
                             </div>
                         </div>

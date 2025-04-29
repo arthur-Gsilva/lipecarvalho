@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/tooltip"
 import Link from "next/link";
 import { usePathname } from "next/navigation"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -24,8 +24,22 @@ export const Header = () => {
         { href: '/materiais', label: 'Materials', tooltip: 'Materiais' },
     ]
 
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+        setScrolled(window.scrollY > 50)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return(
-        <header>
+        <header className={`fixed top-0 w-full z-50 px-6 pb-4 transition-all duration-300 ${
+            scrolled ? 'bg-secondary shadow-md' : 'bg-transparent'
+          }`}>
             <div className="flex items-center container mx-auto justify-between mt-3 px-6 md:px-0">
                 <div className="flex items-center gap-3">
                     <div className="bg-primary h-10 w-10 rounded-full flex justify-center items-center text-white font-bold text-xl">FC</div>
@@ -39,7 +53,6 @@ export const Header = () => {
                     />
                 }
 
-                
                 <nav className={`${openMenu ? "block" : "hidden md:block"}`}>
                     <ul className="flex gap-10 font-bold">
                         {links.map(({ href, label, tooltip }) => {

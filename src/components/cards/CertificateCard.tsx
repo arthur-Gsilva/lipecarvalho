@@ -15,27 +15,27 @@ export const CertificateCard = ({ data }: Props) => {
 
     return(
         <div className="bg-secondary text-primary p-4 rounded-lg shadow-xl">
-            <div className="flex flex-col items-center gap-3 ">
+            <div className="flex flex-col justify-between h-full items-center gap-6 ">
                 <img src={data.image} alt="imagem do certificado" className="h-auto w-full rounded-md"/>
 
                 <ReactCardFlip isFlipped={hovering} flipDirection="horizontal">
-                    <h3 key="front" className="text-xl font-bold text-center">
+                    <h3 key="front" className="text-sm md:text-md font-bold text-center">
                         {data.englishTitle}
                     </h3>
-                    <h3 key="back" className="text-xl font-bold text-center">
+                    <h3 key="back" className="text-sm md:text-md font-bold text-center">
                         {data.portugueseTitle}
                     </h3>
                 </ReactCardFlip>
 
                 <div 
-                    className="px-4 py-2 rounded-md bg-primary text-secondary cursor-pointer"
+                    className="px-2 py-1 sm:px-4 sm:py-2  rounded-md bg-primary text-secondary cursor-pointer"
                     onMouseEnter={() => setHovering(true)}
                     onMouseLeave={() => setHovering(false)}
                 >
                     {hovering ? 'Translate' : 'Traduzir'}
                 </div>
 
-                <Link href={data.link} target="_blank" className="underline">Clique aqui para acessar o certificado</Link>
+                <Link href={data.link} target="_blank" className="underline text-center text-sm sm:text-md">Clique aqui para acessar o certificado</Link>
             </div>
         </div>
     )

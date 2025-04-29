@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Filipe Carvalho",
   icons: {
-    icon: '/favicon.png',  // caminho dentro de /public
+    icon: '/favicon.png',  
   },
 };
 
@@ -32,7 +32,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        {children}
+        <main className="mt-24">
+          {children}
+        </main>
+        
         <Footer />
       </body>
     </html>

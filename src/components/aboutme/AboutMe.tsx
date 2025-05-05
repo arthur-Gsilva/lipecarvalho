@@ -22,9 +22,9 @@ export const AboutMe = () => {
 
             <div className="flex flex-col md:flex-row gap-6 items-center">
                 <img 
-                    src="./about.jpg" 
+                    src="./me.jpg" 
                     alt="Foto minha working" 
-                    className="flex-1 w-44 rounded-md"
+                    className=" w-full md:w-[40%] h-auto border-8 border-primary rounded-sm"
                 />
 
                 <div className="flex-1">

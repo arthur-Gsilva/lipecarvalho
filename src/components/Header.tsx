@@ -11,6 +11,7 @@ import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 export const Header = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
@@ -57,7 +58,7 @@ export const Header = () => {
                 }
 
                 
-                    <ul className={`flex gap-10 font-bold transition-all duration-500 ${openMenu ? "nav right-0" : "nav right-[-300%]"}`}>
+                    <ul className={`flex items-center gap-10 font-bold transition-all duration-500 ${openMenu ? "nav right-0" : "nav right-[-300%]"}`}>
 
                         <div 
                             className="md:hidden absolute top-4 right-4 text-xl text-primary cursor-pointer"
@@ -74,7 +75,7 @@ export const Header = () => {
                                     className={`cursor-pointer transition hover:text-primary ${isActive ? 'text-primary' : ''}`}
                                     onClick={() => setOpenMenu(false)}
                                 >
-                                    <TooltipProvider>
+                                    {/* <TooltipProvider>
                                         <Tooltip>
                                             <TooltipTrigger asChild>
                                                 <Link href={href}>{label}</Link>
@@ -83,10 +84,28 @@ export const Header = () => {
                                                 <p>{tooltip}</p>
                                             </TooltipContent>
                                         </Tooltip>
-                                    </TooltipProvider>
+                                    </TooltipProvider> */}
+
+                                    <Link href={href}>{tooltip}</Link>
                                 </li>
                             )
                         })}
+
+                        <li className="cursor-pointer">
+                            <Select defaultValue={'pt-br'}>
+                                <SelectTrigger >
+                                    <SelectValue placeholder="Lang" />
+                                </SelectTrigger>
+                                <SelectContent className="cursor-pointer">
+                                    <SelectItem value="pt-br" className="cursor-pointer">
+                                        <img src="./brasil.png" alt="bandeira do Brasil" className="w-7 h-7"/>
+                                    </SelectItem>
+                                    <SelectItem value="eng" className="cursor-pointer">
+                                        <img src="./eua.png" alt="bandeira dos Estados Unidos" className="w-7 h-7"/>
+                                    </SelectItem>
+                                </SelectContent>
+                            </Select>
+                        </li>
                     </ul>
                 
             </div>

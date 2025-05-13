@@ -5,10 +5,10 @@ import { Typewriter } from 'react-simple-typewriter'
 export const JobWritter = () => {
   return (
     <h4 className="text-2xl font-bold">
-      I'm{' '}
+      Eu sou{' '}
       <span className="text-primary">
         <Typewriter
-          words={['English Professor', 'Subtitler', 'Translater']}
+          words={['Professor de inglês', 'Legendador', 'Tradutor']}
           loop={true}
           cursor
           cursorStyle="|"

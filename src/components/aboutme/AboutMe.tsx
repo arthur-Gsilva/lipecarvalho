@@ -1,18 +1,21 @@
 'use client'
 
-import { MirrorText } from "../MirrorText"
+import { useLanguage } from "@/context/LangContext"
+import { Title } from "../Title"
 
 export const AboutMe = () => {
 
-    // const englishText = "English teacher and translator since 2015, with experience in teaching English as a foreign language using Cambridge and Cengage materials. I’ve also worked with international companies on translation, localization, editing, and creative campaigns for platforms like Taboola, Baidu, Outbrain, and Zemanta."
+    const { language } = useLanguage()
+
+    const englishText = "English teacher and translator since 2015, with experience in teaching English as a foreign language using Cambridge and Cengage materials. I’ve also worked with international companies on translation, localization, editing, and creative campaigns for platforms like Taboola, Baidu, Outbrain, and Zemanta."
 
     const portugueseText = "Professor de inglês e tradutor desde 2015, com experiência no ensino de inglês como língua estrangeira em escolas renomadas, utilizando materiais da Cambridge e Cengage. Atuei também com tradução e localização para empresas internacionais, incluindo revisão, adaptação criativa e campanhas em plataformas como Taboola, Baidu, Outbrain e Zemanta."
 
     return(
         <div className="container px-6 md:px-0 mx-auto mt-10 pb-10">
-            <MirrorText 
-                main="About Me"
-                mirror="Sobre Mim"
+            <Title 
+                english="About Me"
+                portuguese="Sobre Mim"
                 bgwhite
             />
 
@@ -25,9 +28,8 @@ export const AboutMe = () => {
 
                 <div className="flex-1">
                     <div className="text-center mb-6">
-                        
                         <p className="text-md md:text-xl">
-                            {portugueseText}
+                            {language === 'pt-br' ? portugueseText : englishText}
                         </p>
                         
                     </div>

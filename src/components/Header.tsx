@@ -6,9 +6,12 @@ import { useEffect, useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { useLanguage } from "@/context/LangContext";
 
 export const Header = () => {
     const [openMenu, setOpenMenu] = useState<boolean>(false)
+
+    const { language, setLanguage } = useLanguage();
 
     const pathname = usePathname()
 
@@ -80,23 +83,23 @@ export const Header = () => {
                                         </Tooltip>
                                     </TooltipProvider> */}
 
-                                    <Link href={href}>{tooltip}</Link>
+                                    <Link href={href}>{language === 'pt-br' ? tooltip : label}</Link>
                                 </li>
                             )
                         })}
 
                         <li className="cursor-pointer">
-                            <Select defaultValue={'pt-br'}>
-                                <SelectTrigger >
-                                    <SelectValue placeholder="Lang" />
+                            <Select value={language} onValueChange={(value) => setLanguage(value as 'pt-br' | 'eng')}>
+                                <SelectTrigger>
+                                <SelectValue placeholder="Lang" />
                                 </SelectTrigger>
                                 <SelectContent className="cursor-pointer">
-                                    <SelectItem value="pt-br" className="cursor-pointer">
-                                        <img src="./brasil.png" alt="bandeira do Brasil" className="w-7 h-7"/>
-                                    </SelectItem>
-                                    <SelectItem value="eng" className="cursor-pointer">
-                                        <img src="./eua.png" alt="bandeira dos Estados Unidos" className="w-7 h-7"/>
-                                    </SelectItem>
+                                <SelectItem value="pt-br" className="cursor-pointer">
+                                    <img src="./brasil.png" alt="Bandeira do Brasil" className="w-7 h-7" />
+                                </SelectItem>
+                                <SelectItem value="eng" className="cursor-pointer">
+                                    <img src="./eua.png" alt="Bandeira dos Estados Unidos" className="w-7 h-7" />
+                                </SelectItem>
                                 </SelectContent>
                             </Select>
                         </li>

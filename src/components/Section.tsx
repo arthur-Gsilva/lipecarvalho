@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import ReactCardFlip from 'react-card-flip'
-import { MirrorText } from "./MirrorText"
+import { MirrorText } from "./Title"
 
 type Props = {
     english: string,

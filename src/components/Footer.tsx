@@ -1,5 +1,7 @@
+'use client'
+
 import Link from "next/link"
-import { MirrorText } from "./MirrorText"
+import { Title } from "./Title"
 import { IoLogoInstagram } from "react-icons/io"
 import { FaYoutube, FaLinkedin } from "react-icons/fa6"
 import { FaGithub } from "react-icons/fa";
@@ -12,10 +14,10 @@ export const Footer = () => {
                 <div className="flex flex-col lg:flex-row w-full justify-between gap-8">
                     <div className="flex flex-col md:flex-row justify-between w-full flex-1 md:gap-12">
                         <div>
-                            <MirrorText
-                                main="Contact Me!"
-                                mirror="Fale Comigo!"
-                                bgwhite={false}
+                            <Title 
+                                english="Contact Me"
+                                portuguese="Fale Comigo"
+                                bgwhite
                             />
                         </div>
                         <div className="flex justify-center items-center gap-5">

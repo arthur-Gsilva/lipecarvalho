@@ -1,5 +1,5 @@
 import { BadgeCard } from "@/components/cards/BadgeCard"
-import { MirrorText } from "@/components/MirrorText"
+import { Title } from "@/components/Title"
 import { Badges } from "@/data/badges"
 import Link from "next/link"
 
@@ -7,10 +7,9 @@ const page = () => {
     return(
         <div>
             <div className="container px-6 md:px-0 mx-auto mt-10 pb-10">
-                <MirrorText 
-                    main="Badges"
-                    mirror="Insígnias"
-                    bgwhite
+                <Title 
+                    english="Badges"
+                    portuguese="Insígnias"
                 />
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-8">

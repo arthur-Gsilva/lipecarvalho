@@ -1,3 +1,4 @@
+import { useLanguage } from "@/context/LangContext";
 import { Experience } from "@/data/experiences";
 
 type Props = {
@@ -6,6 +7,7 @@ type Props = {
 
 export const ExperienceItem  = ({ data }: Props) => {
 
+    const { language } = useLanguage()
 
     const Icon = data.icon
 
@@ -14,14 +16,13 @@ export const ExperienceItem  = ({ data }: Props) => {
             <div className="flex flex-col items-center gap-3">
                 <Icon className="text-center text-primary text-4xl" />
 
-                
-                <h3 className="text-xl font-bold text-center">{data.portugueseTitle}</h3>
+                <h3 className="text-xl font-bold text-center">
+                    {language === 'pt-br' ? data.portugueseTitle : data.englishTitle}
+                </h3>
 
-                
-                    <p key="back" className="text-lg text-center">
-                        {data.portugueseText}
-                    </p>
-                
+                <p className="text-lg text-center">
+                    {language === 'pt-br' ? data.portugueseText : data.englishText}
+                </p>
             </div>
         </div>
     )

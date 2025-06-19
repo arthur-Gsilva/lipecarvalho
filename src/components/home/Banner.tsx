@@ -12,8 +12,9 @@ import { useLanguage } from "@/context/LangContext";
 
 export const Banner = () => {
 
-    const englishText = 'English and programming teacher/translator/subtitler <br /> tech lover/headphone enthusiast crazy about coffee and games'
-    const portugueseText = `Professor de inglês e programação/tradutor/legendador <br /> amante de tecnologia/entusiasta de fones de ouvido louco por café e jogos`
+    const englishText = 'Master’s student in educational technologies. Game programming professor. English teacher. <br /> Headphone enthusiast. Coffee lover, heavy metal fan, RPG nerd, and vintage car admirer. Nice to meet you!'
+    const portugueseText = `Mestrando em tecnologias para educação. Professor de programação para jogos digitais.  <br /> Entusiasta de fones de ouvido. Amante de café, heavy metal, RPG e carros antigos. Muito prazer!
+`
 
     const { language } = useLanguage()
 
@@ -21,7 +22,7 @@ export const Banner = () => {
         <div className="relative">
             <div className="container px-6 md:px-0 mt-8 flex flex-col-reverse md:flex-row mx-auto justify-between items-center gap-4">
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">{language === 'pt-br' ? 'Olá, meu nome é' : 'Hello, my name is'} Filipe Carvalho</h1>
+                    <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">{language === 'pt-br' ? 'Olá, meu nome é' : 'Hello, my name is'} Lipe</h1>
 
                     <JobWritter />
 

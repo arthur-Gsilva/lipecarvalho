@@ -7,9 +7,9 @@ export const AboutMe = () => {
 
     const { language } = useLanguage()
 
-    const englishText = "English teacher and translator since 2015, with experience in teaching English as a foreign language using Cambridge and Cengage materials. I’ve also worked with international companies on translation, localization, editing, and creative campaigns for platforms like Taboola, Baidu, Outbrain, and Zemanta."
+    const englishText = "English and Programming teacher with extensive experience in teaching English as a foreign language at renowned institutions, using Cambridge and Cengage materials. I also work with translation and localization for international companies, focusing on editing, creative adaptation, and digital campaigns on platforms such as Taboola, Baidu, Outbrain, and Zemanta. In recent years, I have been developing projects focused on game programming and immersive experiences, with an emphasis on VR (virtual reality) and hands-on teaching of C# and Unity. I coordinate educational projects using active learning methodologies, such as Project-Based Learning, integrating language, technology, and creativity in the teaching-learning process. Currently, I lead innovative initiatives that combine game design, gamification, and storytelling as tools for education and creative expression."
 
-    const portugueseText = "Professor de inglês e tradutor desde 2015, com experiência no ensino de inglês como língua estrangeira em escolas renomadas, utilizando materiais da Cambridge e Cengage. Atuei também com tradução e localização para empresas internacionais, incluindo revisão, adaptação criativa e campanhas em plataformas como Taboola, Baidu, Outbrain e Zemanta."
+    const portugueseText = "Professor de Inglês e Programação com ampla experiência no ensino de inglês como língua estrangeira em instituições renomadas, utilizando materiais da Cambridge e Cengage. Atuo também com tradução e localização para empresas internacionais, com foco em revisão, adaptação criativa e campanhas em plataformas como Taboola, Baidu, Outbrain e Zemanta. Nos últimos anos, venho desenvolvendo projetos voltados à programação de jogos digitais e experiências imersivas, com foco em VR (realidade virtual) e ensino prático de C# e Unity. Coordeno projetos educacionais com metodologias ativas, como Aprendizagem Baseada em Projetos, unindo linguagem, tecnologia e criatividade no processo de ensino-aprendizagem. Atualmente, lidero iniciativas inovadoras que combinam design de jogos, gamificação e storytelling como ferramentas de educação e expressão."
 
     return(
         <div className="container px-6 md:px-0 mx-auto mt-10 pb-10">
@@ -21,7 +21,7 @@ export const AboutMe = () => {
 
             <div className="flex flex-col md:flex-row gap-6 items-center">
                 <img 
-                    src="./nochico.jpg" 
+                    src="./about-me.jpg" 
                     alt="Foto minha working" 
                     className=" w-[80%] md:w-[35%]  border-8 border-primary rounded-sm"
                 />

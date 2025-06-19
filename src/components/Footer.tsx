@@ -13,12 +13,8 @@ export const Footer = () => {
             <div className="container px-6 md:px-0 mx-auto mt-10 py-4 md:py-10">
                 <div className="flex flex-col lg:flex-row w-full justify-between gap-8">
                     <div className="flex flex-col md:flex-row justify-between w-full flex-1 md:gap-12">
-                        <div>
-                            <Title 
-                                english="Contact Me"
-                                portuguese="Fale Comigo"
-                                bgwhite
-                            />
+                        <div className="flex items-center">
+                            <img src="LOGO.png" alt="Logo principal" className="h-auto w-1/2"/>
                         </div>
                         <div className="flex justify-center items-center gap-5">
                             <div className="h-full w-[1px] rounded-md bg-white"></div>

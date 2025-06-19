@@ -18,32 +18,32 @@ export const experiences: Experience[] = [
         id: 1,
         englishTitle: 'Academic Background',
         portugueseTitle: "Formação acadêmica",
-        englishText: 'i have a degree in literature and a postgraduate qualification in innovative educational pratices',
-        portugueseText: "Sou formado em Letras e tenho pós-graduação em práticas educacionais inovadoras",
+        englishText: 'Degree in Languages (Letras) with a postgraduate diploma in innovative educational practices focused on the use of technology in teaching. Currently pursuing a Master’s degree in Emerging Technologies in Education.',
+        portugueseText: "Licenciado em Letras, com pós-graduação em práticas educacionais inovadoras voltadas ao uso de tecnologias no ensino. Mestrando em tecnologias emergentes em educação.",
         icon: PiStudentFill
     },
     {
         id: 2,
         englishTitle: 'Innovative Teaching Experience',
-        portugueseTitle: "Experiência de Ensino Inovadora",
-        englishText: 'Experienced in teaching with active methodologies, gamification, VR and developing educational technology projects',
-        portugueseText: "Experiência em ensino com metodologias ativas, gamificação, RV e desenvolvimento de projetos de tecnologia educacional",
+        portugueseTitle: "Experiência em Ensino Inovador",
+        englishText: 'Experience with active learning methodologies, gamification, virtual reality (VR), and the development of educational technology projects.',
+        portugueseText: "Atuação com metodologias ativas, gamificação, realidade virtual (VR) e desenvolvimento de projetos voltados à tecnologia educacional.",
         icon: BsHeadsetVr
     },
     {
         id: 3,
         englishTitle: 'Google and Microsoft Education',
         portugueseTitle: "Google e Microsoft Education",
-        englishText: 'Microsoft Certified Educator and Expert, Google Certified Trainer and Educator Levels 1 and 2',
-        portugueseText: "Educador e especialista certificado pela Microsoft, instrutor e educador certificado pelo Google níveis 1 e 2",
+        englishText: 'Certified educator by both Microsoft and Google, with solid experience as an instructor and specialist in digital tools for education.',
+        portugueseText: "Educador certificado pela Microsoft e Google, com experiência como instrutor e especialista em ferramentas digitais para o ensino.",
         icon: BsMicrosoft
     },
     {
         id: 4,
-        englishTitle: 'Academic Background',
-        portugueseTitle: "Formação acadêmica",
-        englishText: 'Create 360°  educational videos, teaching content, and a Youtube channel  focused on how to use the platform Microsoft Teams',
-        portugueseText: "Criador de vídeos educacionais 360°, conteúdo didático e um canal do YouTube focado como usar a plataforma do Microsoft Teams",
+        englishTitle: 'Educational Content Creation',
+        portugueseTitle: "Produção de Conteúdo Educacional",
+        englishText: 'Author of educational books and teaching guides, as well as creator of a YouTube channel focused on tutorials for Microsoft Teams and Google Classroom.',
+        portugueseText: "Criador de livros e manuais didático, assim como um canal no YouTube com foco em tutoriais para Microsoft Teams e Google Classroom.",
         icon: MdOndemandVideo
     },
 ]

@@ -19,7 +19,7 @@ export const CertificateCard = ({ data, certificate }: Props) => {
             <div className="flex flex-col justify-between h-full items-center gap-6 ">
                 <img src={data.image} alt="imagem do certificado" className="h-auto w-full rounded-md"/>
                     
-                <h3 className="text-sm md:text-md font-bold text-center">
+                <h3 className="text-sm md:text-md font-bold text-center uppercase">
                     {language === 'pt-br' ? data.portugueseTitle : data.englishTitle}
                 </h3>
 

@@ -10,7 +10,7 @@ type Props = {
     certificate: boolean
 }
 
-export const CertificateCard = ({ data, certificate }: Props) => {
+export const CertificateCard = ({ data }: Props) => {
 
     const { language } = useLanguage()
 
@@ -24,11 +24,11 @@ export const CertificateCard = ({ data, certificate }: Props) => {
                 </h3>
 
                 <Link href={data.link} target="_blank" className="underline text-center text-sm sm:text-md">
-                    {certificate &&
+                    {language === 'pt-br' &&
                         <>Clique aqui para acessar o certificado</>
                     }
-                    {!certificate &&
-                        <>Clique aqui para jogar</>
+                    {language === 'eng' &&
+                        <>Click here to access the certificate</>
                     }
                     
                 </Link>

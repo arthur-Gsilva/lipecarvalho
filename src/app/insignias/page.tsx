@@ -1,9 +1,15 @@
+'use client'
+
 import { BadgeCard } from "@/components/cards/BadgeCard"
 import { Title } from "@/components/Title"
+import { useLanguage } from "@/context/LangContext"
 import { Badges } from "@/data/badges"
 import Link from "next/link"
 
 const page = () => {
+
+    const { language } = useLanguage()
+
     return(
         <div>
             <div className="container px-6 md:px-0 mx-auto mt-10 pb-10">
@@ -19,7 +25,9 @@ const page = () => {
                 </div>
 
                 <div className="mt-12 text-center sm:text-left">
-                    <h4 className="text-xl">Ver mais:</h4>
+                    <h4 className="text-xl">
+                        {language === 'pt-br' ? <>Ver mais:</> : <>See More:</>}
+                    </h4>
 
                     <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full items-center sm:items-baseline">
                         <Link href={'https://edudirectory.withgoogle.com/profiles/6039739744911360'} target="_blank">

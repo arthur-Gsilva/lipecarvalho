@@ -26,7 +26,7 @@ export const Banner = () => {
 
                     <JobWritter />
 
-                    <p className="text-md sm:text-xl text-gray-700">
+                    <p className="text-md sm:text-xl text-gray-700 max-w-xl">
                         <span
                         dangerouslySetInnerHTML={{
                             __html: language === 'pt-br' ? portugueseText : englishText
@@ -64,7 +64,7 @@ export const Banner = () => {
                 <div className="flex justify-center items-center">
                     <div className="relative w-full max-w-lg aspect-square">
                         <img 
-                            src="./me.jpg" 
+                            src="./me.jpg   " 
                             alt="foto minha" 
                             className="w-full h-full object-cover rounded-full border-4 border-primary"
                         />

@@ -12,7 +12,6 @@ export const JobWritter = () => {
 
   return (
     <h4 className="text-2xl font-bold">
-      {language === 'pt-br' ? 'Eu sou' : 'I am a'}{' '}
       <span className="text-primary">
         <Typewriter
           words={language === 'pt-br' ? portuguese : english}

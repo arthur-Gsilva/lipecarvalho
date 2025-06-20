@@ -35,7 +35,7 @@ export const Banner = () => {
                     </p>
 
                     <div className="flex flex-col items-start lg:flex-row lg:items-center gap-4 justify-between">
-                        <div className="flex items-center gap-6">
+                        <div className="flex flex-wrap items-center gap-6">
                             
                             <BigIcon link="https://www.instagram.com/flpc.english/">
                                 <IoLogoInstagram className="text-primary text-3xl cursor-pointer"/>
@@ -68,32 +68,34 @@ export const Banner = () => {
                             alt="foto minha" 
                             className="w-full h-full object-cover rounded-full border-4 border-primary"
                         />
+
+                        
                     </div>
                 </div>
             </div>
 
-            <div className="absolute right-2 top-1/2 -translate-y-1/2 flex flex-col gap-10">
-                <img 
-                    src="./bannerIcons/coffee.png" 
-                    alt="ícone de café" 
-                    className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
-                />
-                <img 
-                    src="./bannerIcons/dice.png" 
-                    alt="Ícone de dado" 
-                    className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
-                />
-                <img 
-                    src="./bannerIcons/dog.png" 
-                    alt="Ícone de cachorro" 
-                    className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
-                />
-                <img 
-                    src="./bannerIcons/game.png" 
-                    alt="Ícone de console" 
-                    className="w-8 h-8 md:h-14 md:w-auto animate-slide-down"
-                />
-            </div>
+            <div className="absolute right-4 top-0 mt-32 md:mt-0 md:top-1/2 -translate-y-1/2 flex flex-col gap-10">
+                            <img 
+                                src="./bannerIcons/coffee.png" 
+                                alt="ícone de café" 
+                                className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
+                            />
+                            <img 
+                                src="./bannerIcons/dice.png" 
+                                alt="Ícone de dado" 
+                                className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
+                            />
+                            <img 
+                                src="./bannerIcons/dog.png" 
+                                alt="Ícone de cachorro" 
+                                className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
+                            />
+                            <img 
+                                src="./bannerIcons/game.png" 
+                                alt="Ícone de console" 
+                                className="w-8 h-8 md:h-14 md:w-auto animate-slide-down"
+                            />
+                        </div>
         </div>
     )
 }

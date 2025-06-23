@@ -6,13 +6,11 @@ type Props = {
 
 export const BadgeCard = ({ data }: Props) => {
     return(
-        <div className="bg-secondary text-primary p-4 rounded-lg shadow-xl">
+        <div className="text-primary p-4 rounded-lg">
             <div className="flex flex-col items-center gap-3">
-                <img src={data.image} alt="imagem do certificado" className="h-auto w-full rounded-md"/>
+                <img src={data.image} alt="imagem do certificado" className="h-auto w-full rounded-xl border-3 border-primary"/>
 
-                <h3 className="text-lg font-bold text-center uppercase">{data.title}</h3>
-
-                <h4 className="text-center">{data.year}</h4>
+                <h3 className="text-sm md:text-lg font-bold text-center uppercase">{data.title}</h3>
             </div>
         </div>
     )

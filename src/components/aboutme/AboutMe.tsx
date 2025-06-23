@@ -19,16 +19,16 @@ export const AboutMe = () => {
                 bgwhite
             />
 
-            <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center">
                 <img 
                     src="./about-me.jpg" 
                     alt="Foto minha working" 
-                    className=" w-[80%] md:w-[35%]  border-8 border-primary rounded-sm"
+                    className=" w-[80%] md:w-[27%] border-4 border-primary rounded-sm"
                 />
 
-                <div className="flex-1">
-                    <div className="text-center mb-6">
-                        <p className="text-md md:text-xl">
+                <div className="">
+                    <div className="text-center font-bold">
+                        <p className="text-md md:text-xl max-w-2xl text-justify">
                             <span
                         dangerouslySetInnerHTML={{
                             __html: language === 'pt-br' ? portugueseText : englishText

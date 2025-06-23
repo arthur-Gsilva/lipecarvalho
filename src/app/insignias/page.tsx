@@ -5,6 +5,8 @@ import { Title } from "@/components/Title"
 import { useLanguage } from "@/context/LangContext"
 import { Badges } from "@/data/badges"
 import Link from "next/link"
+import { CgArrowsHAlt } from "react-icons/cg";
+
 
 const page = () => {
 
@@ -24,27 +26,35 @@ const page = () => {
                     ))}
                 </div>
 
-                <div className="mt-12 text-center sm:text-left">
-                    <h4 className="text-xl">
-                        {language === 'pt-br' ? <>Ver mais:</> : <>See More:</>}
-                    </h4>
+                <div className="mt-12 w-full ">
+                    <div className="flex justify-between items-center w-1/2 mx-auto">
+                        <Link href={'https://learn.microsoft.com/pt-br/users/filipescmelo/'} target="_blank">
+                            <img 
+                                src="microsoft-learn.png" 
+                                alt="microsoft learn" 
+                                className="rounded-xl border-3 border-primary w-44 h-44"
+                            />
+                        </Link>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mt-6 w-full items-center sm:items-baseline">
+                        <div className="relative">
+                            <span 
+                                className="text-xl font-bold absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                            >Ver mais</span>
+                            <img 
+                                src={'arrow.png'}
+                                alt=""
+                                className=""
+                            />
+                            
+                        </div>
+
                         <Link href={'https://edudirectory.withgoogle.com/profiles/6039739744911360'} target="_blank">
-                                <img 
-                                    src="./google-education.jpg" 
-                                    alt="Google Education" 
-                                    className="w-44 h-44 rounded-full bg-secondary p-4 hover:bg-primary transition-all"
-                                />
-                            </Link>
-
-                            <Link href={'https://learn.microsoft.com/pt-br/users/filipescmelo/'} target="_blank">
-                                <img 
-                                    src="./microsoft-learn.png" 
-                                    alt="Microsoft Learn" 
-                                    className="w-44 h-44 rounded-full bg-secondary p-4 hover:bg-primary"
-                                />
-                            </Link>
+                            <img 
+                                src="google-education.jpg" 
+                                alt="Google for education" 
+                                className="rounded-xl border-3 border-primary w-44 h-44"
+                            />
+                        </Link>
                     </div>
                 </div>
             </div>

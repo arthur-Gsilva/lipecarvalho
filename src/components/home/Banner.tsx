@@ -12,8 +12,8 @@ import { useLanguage } from "@/context/LangContext";
 
 export const Banner = () => {
 
-    const englishText = 'Master’s student in educational technologies. Game programming professor. English teacher. <br /> Headphone enthusiast. Coffee lover, heavy metal fan, RPG nerd, and vintage car admirer. Nice to meet you!'
-    const portugueseText = `Mestrando em tecnologias para educação. Professor de programação para jogos digitais.  <br /> Entusiasta de fones de ouvido. Amante de café, heavy metal, RPG e carros antigos. Muito prazer!
+    const englishText = 'Master’s student in educational technologies. Game programming professor. English teacher. Headphone enthusiast. Coffee lover, heavy metal fan, RPG nerd, and vintage car admirer. Nice to meet you!'
+    const portugueseText = `Mestrando em tecnologias para educação. Professor de programação para jogos digitais.  Entusiasta de fones de ouvido. Amante de café, heavy metal, RPG e carros antigos. Muito prazer!
 `
 
     const { language } = useLanguage()
@@ -22,11 +22,9 @@ export const Banner = () => {
         <div className="relative">
             <div className="container px-6 md:px-0 mt-8 flex flex-col-reverse md:flex-row mx-auto justify-between items-center gap-4">
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">{language === 'pt-br' ? 'Olá, meu nome é' : 'Hello, my name is'} Lipe</h1>
+                    <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-primary">{language === 'pt-br' ? 'Olá, meu nome é' : 'Hello, my name is'} Lipe</h1>
 
-                    <JobWritter />
-
-                    <p className="text-md sm:text-xl text-gray-700 max-w-xl">
+                    <p className="text-md sm:text-2xl text-black text-justify max-w-xl">
                         <span
                         dangerouslySetInnerHTML={{
                             __html: language === 'pt-br' ? portugueseText : englishText
@@ -75,27 +73,27 @@ export const Banner = () => {
             </div>
 
             <div className="absolute right-4 top-0 mt-32 md:mt-0 md:top-1/2 -translate-y-1/2 flex flex-col gap-10">
-                            <img 
-                                src="./bannerIcons/coffee.png" 
-                                alt="ícone de café" 
-                                className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
-                            />
-                            <img 
-                                src="./bannerIcons/dice.png" 
-                                alt="Ícone de dado" 
-                                className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
-                            />
-                            <img 
-                                src="./bannerIcons/dog.png" 
-                                alt="Ícone de cachorro" 
-                                className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
-                            />
-                            <img 
-                                src="./bannerIcons/game.png" 
-                                alt="Ícone de console" 
-                                className="w-8 h-8 md:h-14 md:w-auto animate-slide-down"
-                            />
-                        </div>
+                <img 
+                    src="./bannerIcons/coffee.png" 
+                    alt="ícone de café" 
+                    className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
+                />
+                <img 
+                    src="./bannerIcons/dice.png" 
+                    alt="Ícone de dado" 
+                    className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
+                />
+                <img 
+                    src="./bannerIcons/dog.png" 
+                    alt="Ícone de cachorro" 
+                    className="w-8 h-8 md:h-14 md:w-auto  animate-slide-down"
+                />
+                <img 
+                    src="./bannerIcons/game.png" 
+                    alt="Ícone de console" 
+                    className="w-8 h-8 md:h-14 md:w-auto animate-slide-down"
+                />
+            </div>
         </div>
     )
 }

@@ -7,21 +7,27 @@ export type Certificado = {
 
 export const certificates: Certificado[] = [
     {
-        englishTitle: 'Education Innovation Congress 2024',
+        englishTitle: '20th International Congress on Innovation in Education',
         portugueseTitle: 'Congresso de inovação na educação 2024',
         image: './certificados/senac-logo.png',
         link: 'https://drive.google.com/file/d/1p26JaF-gD40IEaF0D8A_PooX6oU6Iuia/view'
     },
     {
-        englishTitle: 'Technology conference in education 2023',
+        englishTitle: '19th International Congress on Technology in Education',
         portugueseTitle: 'Congresso de tecnologia na educação 2023',
         image: './certificados/senac-logo.png',
         link: 'https://drive.google.com/file/d/10cCHYGrJ1KJufIqQiwmu4UsG4k4-jm4I/view'
     },
     {
-        englishTitle: 'Technology conference in education 2022',
+        englishTitle: '18th International Congress on Technology in Education',
         portugueseTitle: 'Congresso de tecnologia na educação 2022',
         image: './certificados/senac-logo.png',
+        link: "https://drive.google.com/file/d/1_FRKtuXNtruzq9ycQ-lm3XhS8P3hfMtf/view"
+    },
+    {
+        englishTitle: 'CATALIZA ICT - MOBILIZE AND LEARN',
+        portugueseTitle: 'CATALISA ICT - MOBILIZAR E APRENDER',
+        image: './certificados/sebrae.png',
         link: "https://drive.google.com/file/d/1_FRKtuXNtruzq9ycQ-lm3XhS8P3hfMtf/view"
     },
     {

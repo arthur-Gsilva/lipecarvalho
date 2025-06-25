@@ -41,6 +41,10 @@ export const Footer = () => {
                                     <SiGmail className="text-white text-3xl cursor-pointer" />
                                     <p className="text-xl font-bold">Gmail</p>
                                 </Link>
+                                <Link href={"http://lattes.cnpq.br/8967415690319745"} target="_blank" className="flex items-center gap-3">
+                                    <img src="lattes.png" alt="Currículo lattes" className="h-8 w-8"/>
+                                    <p className="text-xl font-bold">Lattes</p>
+                                </Link>
                             </div>
                         </div>
                     </div>

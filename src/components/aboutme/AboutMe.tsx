@@ -27,7 +27,7 @@ export const AboutMe = () => {
                 />
 
                 <div className="">
-                    <div className="text-center font-bold">
+                    <div className="text-center">
                         <p className="text-md md:text-xl max-w-2xl text-justify">
                             <span
                         dangerouslySetInnerHTML={{

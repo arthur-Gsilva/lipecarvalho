@@ -27,18 +27,18 @@ const page = () => {
                 </div>
 
                 <div className="mt-12 w-full ">
-                    <div className="flex justify-between items-center w-1/2 mx-auto">
+                    <div className="flex justify-between items-center lg:w-1/2 lg:mx-auto">
                         <Link href={'https://learn.microsoft.com/pt-br/users/filipescmelo/'} target="_blank">
                             <img 
                                 src="microsoft-learn.png" 
                                 alt="microsoft learn" 
-                                className="rounded-xl border-3 border-primary w-44 h-44"
+                                className="rounded-xl border-3 border-primary w-24 h-24 sm:w-44 sm:h-44"
                             />
                         </Link>
 
                         <div className="relative">
                             <span 
-                                className="text-xl font-bold absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                                className=" text-sm sm:text-xl font-bold absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                             >Ver mais</span>
                             <img 
                                 src={'arrow.png'}
@@ -52,7 +52,7 @@ const page = () => {
                             <img 
                                 src="google-education.jpg" 
                                 alt="Google for education" 
-                                className="rounded-xl border-3 border-primary w-44 h-44"
+                                className="rounded-xl border-3 border-primary w-24 h-24 sm:w-44 sm:h-44"
                             />
                         </Link>
                     </div>

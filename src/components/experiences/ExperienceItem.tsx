@@ -14,13 +14,13 @@ export const ExperienceItem  = ({ data }: Props) => {
     return(
         <div className="flex flex-col justify-between items-center gap-3 h-full">
             <div className="flex flex-col items-center gap-3">
-                <Icon className="text-center text-primary text-6xl" />
+                <Icon className="text-center text-primary text-3xl md:text-6xl" />
 
-                <h3 className="text-3xl font-bold text-center">
+                <h3 className=" text-xl md:text-3xl font-bold text-center">
                     {language === 'pt-br' ? data.portugueseTitle : data.englishTitle}
                 </h3>
 
-                <p className="text-xl text-center">
+                <p className="text-md md:text-xl text-center">
                     {language === 'pt-br' ? data.portugueseText : data.englishText}
                 </p>
             </div>

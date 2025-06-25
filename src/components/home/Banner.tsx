@@ -1,7 +1,5 @@
 'use client'
 
-import { JobWritter } from "./JobWritter"
-
 import { IoLogoInstagram } from "react-icons/io";
 import { FaYoutube } from "react-icons/fa";
 import { BigIcon } from "../BigIcon";
@@ -22,14 +20,10 @@ export const Banner = () => {
         <div className="relative">
             <div className="container px-6 md:px-0 mt-8 flex flex-col-reverse md:flex-row mx-auto justify-between items-center gap-4">
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-primary">{language === 'pt-br' ? 'Olá, meu nome é' : 'Hello, my name is'} Lipe</h1>
+                    <h1 className="text-xl sm:text-3xl md:text-5xl font-bold text-primary">{language === 'pt-br' ? 'Olá, meu nome é' : 'Hello, my name is'} Lipe</h1>
 
-                    <p className="text-md sm:text-2xl text-black text-justify max-w-xl">
-                        <span
-                        dangerouslySetInnerHTML={{
-                            __html: language === 'pt-br' ? portugueseText : englishText
-                        }}
-                        />
+                    <p className="text-md sm:text-xl text-black text-justify max-w-xl">
+                        {language === 'pt-br' ? portugueseText : englishText}
                     </p>
 
                     <div className="flex flex-col items-start lg:flex-row lg:items-center gap-4 justify-between">

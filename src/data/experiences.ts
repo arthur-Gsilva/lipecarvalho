@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
     {
         id: 1,
         englishTitle: 'Academic Background',
-        portugueseTitle: "Formação acadêmica",
+        portugueseTitle: "Formação Acadêmica",
         englishText: 'Degree in Languages (Letras) with a postgraduate diploma in innovative educational practices focused on the use of technology in teaching. Currently pursuing a Master’s degree in Emerging Technologies in Education.',
         portugueseText: "Licenciado em Letras, com pós-graduação em práticas educacionais inovadoras voltadas ao uso de tecnologias no ensino. Mestrando em tecnologias emergentes em educação.",
         icon: PiStudentFill

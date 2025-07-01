@@ -19,7 +19,7 @@ export const Header = () => {
         { href: '/', label: 'Home', tooltip: 'Início' },
         { href: '/certificados', label: 'Certificates', tooltip: 'Certificados' },
         { href: '/insignias', label: 'Badges', tooltip: 'Insígnias' },
-        { href: '/materiais', label: 'Materials', tooltip: 'Materiais' },
+        { href: 'https://lipecarvalho.my.canva.site/mecanicas-de-codigo-unity-2d-na-pratica', label: 'Book', tooltip: 'Livro' },
     ]
 
     const [scrolled, setScrolled] = useState(false)

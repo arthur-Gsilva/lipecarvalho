@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/explicando",
+      "destination": "https://meet.google.com/huo-ejbi-pth",
+      "permanent": false
+    }
+  ]
+}
